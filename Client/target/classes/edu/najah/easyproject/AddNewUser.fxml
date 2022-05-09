@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane minWidth="400.0" prefHeight="388.0" prefWidth="489.0"
+            style="-fx-background-color: #131022; -fx-border-color: #16bab2; -fx-border-radius: 5; -fx-border-width: 2;"
+            xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.najah.easyproject.AddNewUserController">
+  <cursor>
+    <Cursor fx:constant="DEFAULT"/>
+  </cursor>
+  <Line endX="100.0" layoutX="168.0" layoutY="74.0" startX="100.0" startY="270.0" stroke="#16bab2"
+        strokeDashOffset="2.0"/>
+  <Label layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="194.0" text="Add New User" textFill="#16bab2">
+    <font>
+      <Font size="30.0"/>
+    </font>
+  </Label>
+  <Label layoutX="22.0" layoutY="60.0" prefHeight="27.0" prefWidth="218.0" text="Insert New User Info"
+         textFill="#16bab2">
+    <font>
+      <Font size="18.0"/>
+    </font>
+  </Label>
+  <Circle fx:id="image" fill="#131022" layoutX="369.0" layoutY="174.0" radius="100.0" stroke="WHITE" strokeType="INSIDE"
+          strokeWidth="2.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="5.0">
+    <cursor>
+      <Cursor fx:constant="HAND"/>
+    </cursor>
+  </Circle>
+  <Circle fill="#fa4771" layoutX="470.0" layoutY="19.0" onMouseClicked="#logout" radius="5.0" stroke="#fa4771"
+          strokeType="INSIDE">
+    <cursor>
+      <Cursor fx:constant="HAND"/>
+    </cursor>
+  </Circle>
+  <Label fx:id="status" alignment="CENTER" layoutX="282.0" layoutY="344.0" prefHeight="30.0" prefWidth="200.0"
+         textFill="#16bab2" AnchorPane.bottomAnchor="13.600000000000023">
+    <font>
+      <Font size="15.0"/>
+    </font>
+  </Label>
+  <Button layoutX="285.0" layoutY="310.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="31.0"
+          prefWidth="194.0" style="-fx-background-color: #16bab2; -fx-background-radius: 5;" text="Choose Image"
+          textFill="WHITE">
+    <font>
+      <Font size="15.0"/>
+    </font>
+    <cursor>
+      <Cursor fx:constant="HAND"/>
+    </cursor>
+  </Button>
+  <TextField fx:id="email" layoutX="18.0" layoutY="102.0" prefHeight="30.0" prefWidth="230.0" promptText="Email "
+             AnchorPane.leftAnchor="18.0">
+    <font>
+      <Font size="15.0"/>
+    </font>
+  </TextField>
+  <TextField fx:id="name" layoutX="18.0" layoutY="182.0" prefHeight="30.0" prefWidth="230.0" promptText="Name "
+             AnchorPane.leftAnchor="18.0">
+    <font>
+      <Font size="15.0"/>
+    </font>
+  </TextField>
+  <TextField fx:id="address" layoutX="18.0" layoutY="222.0" prefHeight="30.0" prefWidth="230.0" promptText="Address"
+             AnchorPane.leftAnchor="18.0">
+    <font>
+      <Font size="15.0"/>
+    </font>
+  </TextField>
+  <TextField fx:id="password" layoutX="18.0" layoutY="142.0" prefHeight="30.0" prefWidth="230.0" promptText="Password"
+             AnchorPane.leftAnchor="18.0">
+    <font>
+      <Font size="15.0"/>
+    </font>
+  </TextField>
+  <Button layoutX="16.0" layoutY="342.0" mnemonicParsing="false" onAction="#addNewUser" prefHeight="30.0"
+          prefWidth="230.0" style="-fx-background-color: #16bab2; -fx-background-radius: 5;" text="add New User"
+          textFill="WHITE" AnchorPane.leftAnchor="16.0">
+    <font>
+      <Font size="15.0"/>
+    </font>
+    <cursor>
+      <Cursor fx:constant="HAND"/>
+    </cursor>
+  </Button>
+  <TextField fx:id="id" layoutX="18.0" layoutY="262.0" prefHeight="30.0" prefWidth="230.0"
+             promptText="ID: Empty means default value" AnchorPane.leftAnchor="18.0">
+    <font>
+      <Font size="15.0"/>
+    </font>
+  </TextField>
+  <RadioButton fx:id="admin" layoutX="34.0" layoutY="304.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="76.0"
+               text="Admin" textFill="#16bab2" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="381.0">
+    <font>
+      <Font size="15.0"/>
+    </font>
+    <toggleGroup>
+      <ToggleGroup fx:id="userType"/>
+    </toggleGroup>
+  </RadioButton>
+  <RadioButton fx:id="employee" layoutX="118.0" layoutY="304.0" mnemonicParsing="false" text="Employee"
+               textFill="#16bab2" toggleGroup="$userType" AnchorPane.rightAnchor="250.0">
+    <font>
+      <Font size="15.0"/>
+    </font>
+  </RadioButton>
+</AnchorPane>

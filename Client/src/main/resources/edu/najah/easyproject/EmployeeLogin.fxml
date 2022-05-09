@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="310.0" style="-fx-background-color: #2c344b;" xmlns="http://javafx.com/javafx/18"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.najah.easyproject.EmployeeLoginController">
+  <AnchorPane prefHeight="48.0" prefWidth="310.0" style="-fx-background-color: #2e354f;">
+    <Label layoutX="97.0" layoutY="20.0" prefHeight="36.0" prefWidth="116.0" text="Employee" textFill="#16bab2"
+           AnchorPane.topAnchor="20.0">
+      <font>
+        <Font size="25.0"/>
+      </font>
+    </Label>
+    <Circle fill="#fa4771" layoutX="16.0" layoutY="24.0" onMouseClicked="#logout" radius="5.0" stroke="#fa4771"
+            strokeType="INSIDE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0">
+      <cursor>
+        <Cursor fx:constant="HAND"/>
+      </cursor>
+    </Circle>
+  </AnchorPane>
+  <ImageView fitHeight="107.0" fitWidth="140.0" layoutX="102.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+    <Image url="@images/employeeAvatar.png"/>
+  </ImageView>
+  <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="18.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+    <Image url="@images/usernameIcon.png"/>
+  </ImageView>
+  <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="18.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true"
+             AnchorPane.leftAnchor="18.0">
+    <Image url="@images/passwordIcon.png"/>
+  </ImageView>
+  <Button layoutX="60.0" layoutY="320.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="222.0"
+          style="-fx-background-color: #16bab2;" text="Login As Employee" textFill="WHITE">
+    <font>
+      <Font size="15.0"/>
+    </font>
+    <cursor>
+      <Cursor fx:constant="HAND"/>
+    </cursor>
+  </Button>
+  <PasswordField fx:id="password" layoutX="59.0" layoutY="274.0" prefHeight="30.0" prefWidth="222.0"
+                 promptText="Password" style="-fx-border-radius: 10px;"/>
+  <TextField fx:id="email" layoutX="60.0" layoutY="225.0" prefHeight="30.0" prefWidth="220.0" promptText="Email"
+             style="-fx-border-radius: 10px;" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="30.0"
+             AnchorPane.topAnchor="225.0"/>
+  <Label fx:id="status" alignment="CENTER" layoutX="60.0" layoutY="362.0" prefHeight="30.0" prefWidth="222.0"
+         textAlignment="CENTER" textFill="#b8163f">
+    <font>
+      <Font size="13.0"/>
+    </font>
+  </Label>
+</AnchorPane>
